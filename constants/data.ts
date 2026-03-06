@@ -23,7 +23,7 @@ export const DATA = {
   // ── About stats — animated count-up on scroll ─────────────
   stats: [
     { target: 4, suffix: "+", label: "Years Experience" },
-    { target: 15, suffix: "+", label: "Projects Shipped" },
+    { target: 20, suffix: "+", label: "Projects Shipped" },
     { target: 100, suffix: "k", label: "Users Served" },
     { target: 999, suffix: "+", label: "Coffees Consumed" },
   ],
