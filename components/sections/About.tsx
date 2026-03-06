@@ -66,21 +66,11 @@ export function About() {
   return (
     <section
       id="about"
-      style={{
-        background: THEME.black,
-        color: THEME.white,
-        padding: "5rem 6rem",
-      }}
+      className="section-pad"
+      style={{ background: THEME.black, color: THEME.white }}
     >
       <SectionHeader light>About Me</SectionHeader>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "3rem",
-          alignItems: "start",
-        }}
-      >
+      <div className="about-grid">
         <div className="reveal-left">
           {[
             <span key="1">
@@ -102,7 +92,7 @@ export function About() {
               </Highlight>
               , and{" "}
               <Highlight color={THEME.pink}>high-concurrency systems</Highlight>
-              . Proven track record with cloud infrastructure on AWS & GCP,
+              . Proven track record with cloud infrastructure on AWS &amp; GCP,
               Kubernetes deployments, and full observability stacks.
             </span>,
             <span key="3">
@@ -130,14 +120,7 @@ export function About() {
             </p>
           ))}
         </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "1.5rem",
-          }}
-          className="reveal-right"
-        >
+        <div className="stats-grid reveal-right">
           {DATA.stats.map((st) => (
             <AnimatedStatCard key={st.label} {...st} />
           ))}

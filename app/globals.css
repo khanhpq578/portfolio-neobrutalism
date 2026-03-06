@@ -19,7 +19,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #f5f0e8;
@@ -30,6 +30,7 @@ body {
   border: 2px solid #0a0a0a;
 }
 
+/* ── Keyframes ───────────────────────────────── */
 @keyframes slideLeft {
   from {
     opacity: 0;
@@ -87,6 +88,16 @@ body {
     transform: rotate(-7deg) translateY(4px);
   }
 }
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 .animate-slide-left {
   animation: slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -121,7 +132,11 @@ body {
 .animate-wiggle3 {
   animation: wiggle 5s ease-in-out infinite;
 }
+.animate-slide-down {
+  animation: slideDown 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 
+/* ── Grid bg ─────────────────────────────────── */
 .grid-bg {
   background:
     repeating-linear-gradient(
@@ -140,7 +155,7 @@ body {
     );
 }
 
-/* Scroll reveal classes */
+/* ── Scroll reveal ───────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -167,4 +182,196 @@ body {
 .reveal-right.visible {
   opacity: 1;
   transform: none;
+}
+
+/* ── MOBILE MENU DRAWER ──────────────────────── */
+.mobile-menu {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  background: #ffd000;
+  border-bottom: 3px solid #0a0a0a;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu a {
+  padding: 16px 24px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #0a0a0a;
+  text-decoration: none;
+  color: #0a0a0a;
+  transition: background 0.15s;
+}
+.mobile-menu a:active {
+  background: #0a0a0a;
+  color: #ffd000;
+}
+.mobile-menu .m-cta {
+  margin: 16px;
+  padding: 14px;
+  background: #0a0a0a;
+  color: #ffd000;
+  border: 3px solid #0a0a0a;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 5px 5px 0 #0a0a0a;
+}
+
+/* ── SECTION PADDING responsive ──────────────── */
+.section-pad {
+  padding: 5rem 6rem;
+}
+
+@media (max-width: 1024px) {
+  .section-pad {
+    padding: 4rem 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-pad {
+    padding: 3rem 1.25rem;
+  }
+  /* On mobile, disable horizontal reveal to avoid flash */
+  .reveal-left,
+  .reveal-right {
+    transform: translateY(20px);
+  }
+}
+@media (max-width: 480px) {
+  .section-pad {
+    padding: 2.5rem 1rem;
+  }
+}
+
+/* ── HERO grid ───────────────────────────────── */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-avatar {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .hero-grid {
+    gap: 2rem;
+  }
+}
+
+/* ── ABOUT grid ──────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+/* ── JOURNEY grid ────────────────────────────── */
+.journey-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.journey-hl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+@media (max-width: 900px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+  .journey-card-sticky {
+    position: static !important;
+  }
+}
+@media (max-width: 600px) {
+  .journey-hl-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── SKILLS grid ─────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── PROJECTS grid ───────────────────────────── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── CONTACT grid ────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.social-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .social-row {
+    gap: 0.75rem;
+  }
+}
+
+/* ── FLOATING TAGS hide on mobile ────────────── */
+@media (max-width: 480px) {
+  .floating-tag {
+    display: none;
+  }
 }

@@ -7,16 +7,11 @@ export function Skills() {
   return (
     <section
       id="skills"
-      style={{ background: THEME.yellow, padding: "5rem 6rem" }}
+      className="section-pad"
+      style={{ background: THEME.yellow }}
     >
       <SectionHeader>Skills</SectionHeader>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3,1fr)",
-          gap: "1.4rem",
-        }}
-      >
+      <div className="skills-grid">
         {DATA.skillCards.map((card, i) => (
           <SkillCard key={card.title} {...card} delay={i * 70} />
         ))}

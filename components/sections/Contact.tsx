@@ -9,12 +9,11 @@ export function Contact() {
   return (
     <section
       id="contact"
-      style={{ background: THEME.white, padding: "5rem 6rem" }}
+      className="section-pad"
+      style={{ background: THEME.white }}
     >
       <SectionHeader>Get In Touch</SectionHeader>
-      <div
-        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem" }}
-      >
+      <div className="contact-grid">
         {/* Left */}
         <div className="reveal-left">
           <EduCard />
@@ -66,14 +65,7 @@ export function Contact() {
             interesting collaborations. Let&apos;s build something reliable
             together.
           </p>
-          <div
-            style={{
-              display: "flex",
-              gap: "1rem",
-              flexWrap: "wrap",
-              marginBottom: "1.5rem",
-            }}
-          >
+          <div className="social-row">
             {DATA.social.map((sc) => (
               <SocialCard key={sc.label} {...sc} />
             ))}

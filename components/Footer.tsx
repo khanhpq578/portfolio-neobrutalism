@@ -7,11 +7,13 @@ export function Footer() {
       style={{
         background: THEME.black,
         color: "#666",
-        padding: "2rem 6rem",
+        padding: "2rem clamp(1rem, 6vw, 6rem)",
         borderTop: THEME.border,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        flexWrap: "wrap",
+        gap: "0.5rem",
         fontSize: "0.85rem",
       }}
     >

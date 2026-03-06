@@ -294,7 +294,7 @@ export const DATA = {
   // ── Languages ─────────────────────────────────────────────
   languages: [
     { name: "Vietnamese", dots: 3 },
-    { name: "English", dots: 2 },
+    { name: "English", dots: 1 },
   ],
 
   // ── Social ────────────────────────────────────────────────

@@ -11,16 +11,11 @@ export function Projects() {
   return (
     <section
       id="projects"
-      style={{ background: THEME.black, padding: "5rem 6rem" }}
+      className="section-pad"
+      style={{ background: THEME.black }}
     >
       <SectionHeader light>Featured Projects</SectionHeader>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2,1fr)",
-          gap: "1.5rem",
-        }}
-      >
+      <div className="projects-grid">
         {DATA.projects.map((p, i) => {
           const hov = active === i;
           return (

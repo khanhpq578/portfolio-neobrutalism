@@ -12,20 +12,14 @@ export function Journey() {
   return (
     <section
       id="journey"
-      style={{ padding: "5rem 6rem", background: THEME.white }}
+      className="section-pad"
+      style={{ background: THEME.white }}
     >
       <SectionHeader>My Journey</SectionHeader>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "290px 1fr",
-          gap: "2.5rem",
-          alignItems: "start",
-        }}
-      >
+      <div className="journey-grid">
         {/* ── Left: sticky experience card ── */}
         <div
-          className="reveal-left"
+          className="reveal-left journey-card-sticky"
           style={{
             border: THEME.border,
             boxShadow: THEME.shadowLg,
@@ -136,13 +130,7 @@ export function Journey() {
           >
             Click each area to explore →
           </div>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "0.9rem",
-            }}
-          >
+          <div className="journey-hl-grid">
             {j.highlights.map((h, i) => {
               const active = openIdx === i;
               return (
