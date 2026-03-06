@@ -303,9 +303,14 @@ export const DATA = {
       label: "LinkedIn",
       icon: "💼",
       bg: THEME.cyan,
-      url: "https://linkedin.com/in/khanh-pham",
+      url: "https://www.linkedin.com/in/kh%C3%A1nh-ph%E1%BA%A1m-qu%E1%BB%91c-199873303",
     },
-    { label: "GitHub", icon: "🐙", bg: THEME.yellow, url: "#" },
+    {
+      label: "GitHub",
+      icon: "🐙",
+      bg: THEME.yellow,
+      url: "https://github.com/khanhpq578",
+    },
     {
       label: "Email",
       icon: "✉️",
